@@ -1,0 +1,14 @@
+node_modules/
+dist/
+*.log
+.DS_Store
+
+# Never commit credentials or tokens
+.env
+.env.*
+!.env.example
+client_secret*.json
+credentials*.json
+token*.json
+*.pem
+*.key

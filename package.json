@@ -1,0 +1,46 @@
+{
+  "name": "youtube-playlist-mcp",
+  "version": "0.1.0",
+  "private": true,
+  "description": "MCP server that lets AI agents research a topic on YouTube, score the best videos and build a playlist in your account (official YouTube Data API only).",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "youtube",
+    "playlist",
+    "claude",
+    "ai-agent"
+  ],
+  "license": "MIT",
+  "author": "Onur Haktan",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/haktanonur/youtube-playlist-mcp.git"
+  },
+  "homepage": "https://github.com/haktanonur/youtube-playlist-mcp#readme",
+  "bugs": {
+    "url": "https://github.com/haktanonur/youtube-playlist-mcp/issues"
+  },
+  "type": "module",
+  "main": "dist/index.js",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "npm run build && node --test \"dist/**/*.test.js\"",
+    "start": "node dist/index.js",
+    "auth": "node dist/index.js auth",
+    "status": "node dist/index.js status",
+    "logout": "node dist/index.js logout"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.32.2",
+    "zod": "^4.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "~5.9.3"
+  }
+}
